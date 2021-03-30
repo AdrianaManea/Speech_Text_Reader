@@ -2,7 +2,6 @@
 
 :root {
   --primary-color: #ffefea;
-  /* --primary-color-dark: #372e29; */
   --secondary-color: #bd2d39;
 }
 
@@ -19,6 +18,10 @@ body {
 
 h1 {
   text-align: center;
+}
+
+h3 {
+  margin: 5px;
 }
 
 .container {
@@ -69,18 +72,12 @@ select:focus {
   transform: translate(-50%, 0px);
 }
 
-.text-box select {
+select {
   background-color: var(--secondary-color);
   color: #fff;
   height: 30px;
   width: 100%;
-  outline: 0;
 }
-
-/* 
-.text-box select option {
-  border: 1px solid blueviolet;
-} */
 
 option:not(:checked) {
   background-color: rgba(0, 0, 0, 0.5);
@@ -103,7 +100,7 @@ option:not(:checked) {
 
 .text-box .close {
   position: absolute;
-  top: 20px;
+  top: 10px;
   right: 20px;
   cursor: pointer;
 }
@@ -112,6 +109,7 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 15px;
+  margin-top: 25px;
 }
 
 .box {

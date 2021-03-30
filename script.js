@@ -122,6 +122,12 @@ function speakText() {
 }
 
 
+// Set voice
+function setVoice(e) {
+  message.voice = voices.find(voice => voice.name === e.target.value);
+}
+
+
 // EVENT LISTENERS
 
 // Voices changed
@@ -133,5 +139,13 @@ toggleBtn.addEventListener('click', () => document.getElementById('text-box').cl
 // Close btn
 closeBtn.addEventListener('click', () => document.getElementById('text-box').classList.remove('show'));
 
+// Change voice
+voicesSelect.addEventListener('change', setVoice);
+
+// Read text button
+readBtn.addEventListener('click', () => {
+  setTextMessage(textarea.value);
+  speakText();
+})
 
 getVoices();
