@@ -21,7 +21,7 @@ h1 {
 }
 
 h3 {
-  margin: 5px;
+  margin: 10px 10px 10px 0;
 }
 
 .container {
@@ -73,10 +73,11 @@ select:focus {
 }
 
 select {
-  background-color: var(--secondary-color);
+  background-color: #db6970;
   color: #fff;
   height: 30px;
-  width: 100%;
+  width: 40%;
+
 }
 
 option:not(:checked) {
@@ -109,7 +110,7 @@ main {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 15px;
-  margin-top: 25px;
+  margin-top: 35px;
 }
 
 .box {
