@@ -8,6 +8,11 @@
   main {
     grid-template-columns: repeat(2, 1fr);
   }
+
+  select {
+    font-size: 12px;
+    width: 60%;
+  }
 }
 
 @media(max-width: 500px) {
