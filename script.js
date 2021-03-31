@@ -5,6 +5,8 @@ const textarea = document.getElementById('textarea');
 const readBtn = document.getElementById('read-btn');
 const main = document.getElementById('main');
 const stopBtn = document.getElementById('stop');
+const textBox = document.getElementById('text-box');
+const clearBtn = document.getElementById('clear-btn');
 
 const data = [{
     image: './img/drink.jpg',
@@ -122,7 +124,6 @@ function speakText() {
   speechSynthesis.speak(message);
 }
 
-
 // Set voice
 function setVoice(e) {
   message.voice = voices.find(voice => voice.name === e.target.value);
@@ -136,23 +137,34 @@ function setVoice(e) {
 speechSynthesis.addEventListener('voiceschanged', getVoices);
 
 // Toggle text box
-toggleBtn.addEventListener('click', () => document.getElementById('text-box').classList.toggle('show'));
+toggleBtn.addEventListener('click', () => {
+  textBox.classList.toggle('show');
+  textarea.value = '';
+});
 
 // Close btn
-closeBtn.addEventListener('click', () => document.getElementById('text-box').classList.remove('show'));
+closeBtn.addEventListener('click', () => {
+  textBox.classList.remove('show');
+  textarea.value = '';
+});
 
 // Change voice
 voicesSelect.addEventListener('change', setVoice);
 
-// Read text button
+// Read text btn
 readBtn.addEventListener('click', () => {
   setTextMessage(textarea.value);
   speakText();
 });
 
-// Stop speaking
+// Stop speaking btn
 stopBtn.addEventListener('click', () => {
   speechSynthesis.cancel();
+});
+
+// Clear text btn
+clearBtn.addEventListener('click', () => {
+  textarea.value = '';
 });
 
 

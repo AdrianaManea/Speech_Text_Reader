@@ -86,6 +86,8 @@ select {
   color: #fff;
   height: 30px;
   width: 40%;
+  border: 0;
+  border-radius: 5px;
 }
 
 option:not(:checked) {
@@ -103,8 +105,13 @@ option:not(:checked) {
   background-color: #fff3f5;
 }
 
-.text-box .btn {
-  width: 100%;
+.text-box .buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.text-box .buttons .btn {
+  width: 30%;
 }
 
 .text-box .close {
