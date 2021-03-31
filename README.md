@@ -1,6 +1,9 @@
 ## Speech Text Reader
 
-A text to speech app for non-verbal people. Pre-made buttons and custom text speech. This project uses the Web Speech API
+A text to speech app for non-verbal people.
+This project uses the Web Speech API
+Pre-made buttons and custom text speech.
+Stop speaking button
 
 ## Project Specifications
 
@@ -8,4 +11,5 @@ A text to speech app for non-verbal people. Pre-made buttons and custom text spe
 - Speaks the text when button clicked
 - Drop down custom text to speech
 - Speaks the text typed in
+- Stop speaking button
 - Change voices and accents

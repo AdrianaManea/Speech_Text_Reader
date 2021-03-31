@@ -4,6 +4,7 @@ const voicesSelect = document.getElementById('voices');
 const textarea = document.getElementById('textarea');
 const readBtn = document.getElementById('read-btn');
 const main = document.getElementById('main');
+const stopBtn = document.getElementById('stop');
 
 const data = [{
     image: './img/drink.jpg',
@@ -128,6 +129,7 @@ function setVoice(e) {
 }
 
 
+
 // EVENT LISTENERS
 
 // Voices changed
@@ -147,5 +149,11 @@ readBtn.addEventListener('click', () => {
   setTextMessage(textarea.value);
   speakText();
 });
+
+// Stop speaking
+stopBtn.addEventListener('click', () => {
+  speechSynthesis.cancel();
+});
+
 
 getVoices();
